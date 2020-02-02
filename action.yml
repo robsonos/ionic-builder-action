@@ -1,0 +1,14 @@
+name: 'Ionic builder'
+description: 'Ionic builder'
+author: 'Robson Oliveira dos Santos'
+inputs: 
+  cmd:
+    description: 'Command to execute'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'  
+  args:
+    - ${{ inputs.cmd }}
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'

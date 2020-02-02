@@ -1,0 +1,18 @@
+name: Test action
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show versions
+      uses: robsonos/ionic-builder-action@v1
+      with:
+        cmd: |
+          node -v
+          npm -v
+          ionic -v
+          cordova -v
+          gradle -v
